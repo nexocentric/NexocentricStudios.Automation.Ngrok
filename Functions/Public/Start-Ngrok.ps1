@@ -22,7 +22,7 @@ function Start-Ngrok
 			
 			Write-Verbose "Starting ngrok"
 			& $NGROK_EXECUTABLE start --config $NGROK_AUTHTOKEN_FILE --config $NGROK_CONFIGURATION_FILE --all
-			Start-Job -Name $NGROK_JOB_NAME -ScriptBlock {  } | Out-Null
+			# Start-Job -Name $NGROK_JOB_NAME -ScriptBlock {  } | Out-Null
 		}
 	}
 	finally
